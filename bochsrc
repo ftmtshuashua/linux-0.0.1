@@ -1,0 +1,17 @@
+megs: 32
+
+romimage: file=/usr/local/Cellar/bochs/2.6.9_1/share/bochs/BIOS-bochs-latest
+vgaromimage:file=/usr/local/Cellar/bochs/2.6.9_1/share/bochs/VGABIOS-lgpl-latest
+
+floppya:1_44=./Image, status=inserted
+
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="root/images/hdimage-devel", mode=flat, cylinders=410, heads=16, spt=38
+#ata1: enabled=1, ioaddr1=0x170, ioaddr2=0x370, irq=15
+
+#ata0-master: type=disk, path="root/rootimage-0.11", mode=flat
+boot: floppy
+
+log: bochsout.txt
+
+#gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
